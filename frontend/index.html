@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Acapulco store</title>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2">
+                            <span class="font-semibold text-gray-500 text-lg">Example</span>
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="/" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Inicio</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"></a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+                    </div>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3 ">
+
+                   
+                    <button id="checkout" onclick="showOrder()" class="bg-green-500 text-gray-50 hover:bg-green-700 p-3 px-3 sm:px-5 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        
+                    </button>
+                    <div id="mp"></div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="checkout" onclick="showOrder()" class="bg-green-500 text-gray-50 hover:bg-green-700 p-3 px-3 sm:px-5 mr-2 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        
+                    </button>
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Inicio</a></li>
+                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Categorias</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main>
+<div id="page-content" class="page-content">
+        <div class="md:flex md:flex-row mt-20" id="hero">
+            <div class="md:w-2/5 flex flex-col justify-center items-center">
+                <h2 class="font-bold text-4xl text-gray-600 mb-4 text-center md:text-center">Los productos que buscas</h2>
+                <p class="text-gray-600 tracking-wide text-2xl text center md:text-left">Compra hoy, </p>
+                <p class="text-gray-600 tracking-wide text-2xl text-center md:text-left">sin moverte de tu casa.</p>
+                <a href="#productos" class="bg-gradient-to-r from-green-500 to-blue-500 rounded-full py-4 px-8 text-gray-50 uppercase text-xl self-center my-5">Ver tienda</a>
+            </div>
+            <div class="md:w-3/5">
+                <img class="md:w-4/6" src="https://static.vecteezy.com/system/resources/previews/001/222/481/large_2x/e-commerce-smartphone-shopping-concept-vector.jpg"/>
+            </div>
+        </div>
+
+        <div class="my-20">
+            <div class="flex flex-row justify-between">
+                <h2 class="text-3x1">Nuestra colección</h2>
+                <a href="#productos" class="text-xl flex flex-row">
+                    Ver todo
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/> 
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <section id="products">
+            <div id="all-products" class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            <h1 class="title">hombre</h1>
+            <div id="product-cards-hombre" class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"></div>
+            <h1 class="title">mujer</h1>
+            <div id="product-cards-mujer" class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"></div>
+            </div>
+        </section>
+</div>
+<a href="https://wa.me/541122503326?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
+
+        <div id="order" class="flex-1 p-6 bg-white">
+            <h1 class="font-bold text-gray-400 text-3x1 mb-6">Carrito</h1>
+            <div class="font-bold text-gray-400 table-titles flex">
+                <h2 class="flex-grow">Producto</h2>
+                <h2 class="w-48">Cantidad</h2>
+                <h2 class="w-48">Coste total</h2>
+            </div>
+
+            <h2 id="order-total">Total: $150</h2>
+            <table id="order-table" class="order-table">
+                <tr>
+                  <th>Cantidad</th>
+                  <th>Detalle</th>
+                  <th>Subtotal</th>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Pesas</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Banco ajustable</td>
+                  <td>100</td>
+                </tr>
+            </table>
+            <h1>Dirección de envío:</h1>
+            <div id="order-shipping" class="order-shipping">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" name="phone" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine1">Dirección Linea 1:</label>
+                    <input type="text" name="addressLine1" id="addressLine1">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine2">Dirección Linea 2:</label>
+                    <input type="text" name="addressLine2" id="addressLine2">
+                </div>
+                <div class="form-group">
+                    <label for="city">Ciudad:</label>
+                    <input type="text" name="city" id="city">
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Código postal:</label>
+                    <input type="text" name="postalCode" id="postalCode">
+                </div>
+                <div class="form-group">
+                    <label for="state">Provincia:</label>
+                    <input type="text" name="state" id="state">
+                </div>
+                <div class="form-group">
+                    <label for="country">País:</label>
+                    <input type="text" name="country" id="country">
+                </div>
+            </div>
+            <div id="order-actions" class="order-actions">
+                <p onclick="displayProducts()"><< volver</p>
+                <p onclick="pay()">confirmar >></p>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+
+
+        <button id="checkout" class="button-checkout" onclick="showOrder()">Carrito</button>
+    </div>
+    
+        
+
+        
+
+        <div id="order" class="order">
+            <h1>Orden:</h1>
+            <h2 id="order-total">Total: $150</h2>
+            <table id="order-table" class="order-table">
+                <tr>
+                  <th>Cantidad</th>
+                  <th>Detalle</th>
+                  <th>Subtotal</th>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Pesas</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Banco ajustable</td>
+                  <td>100</td>
+                </tr>
+            </table>
+            <h1>Dirección de envío:</h1>
+            <div id="order-shipping" class="order-shipping">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" name="phone" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine1">Dirección Linea 1:</label>
+                    <input type="text" name="addressLine1" id="addressLine1">
+                </div>
+                <div class="form-group">
+                    <label for="addressLine2">Dirección Linea 2:</label>
+                    <input type="text" name="addressLine2" id="addressLine2">
+                </div>
+                <div class="form-group">
+                    <label for="city">Ciudad:</label>
+                    <input type="text" name="city" id="city">
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Código postal:</label>
+                    <input type="text" name="postalCode" id="postalCode">
+                </div>
+                <div class="form-group">
+                    <label for="state">Provincia:</label>
+                    <input type="text" name="state" id="state">
+                </div>
+                <div class="form-group">
+                    <label for="country">País:</label>
+                    <input type="text" name="country" id="country">
+                </div>
+            </div>
+            <div id="order-actions" class="order-actions">
+                <p onclick="displayProducts()"><< volver</p>
+                <p onclick="pay()">confirmar >></p>
+            </div>
+        </div>
+    </div>
+</body>
